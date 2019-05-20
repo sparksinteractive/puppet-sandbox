@@ -3,6 +3,8 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
+console.log("starting sandbox server");
+
 
 app.get("/", (req, res) => {
   console.log("Hello world received a request.");
@@ -11,11 +13,6 @@ app.get("/", (req, res) => {
   res.send(`Hello`);
 });
 
-// http.createServer(function (req, res) {
-//     console.log("Server Created!")
-//   // res.writeHead(200, {'Content-Type': 'text/html'});
-//   // res.end(`<h1>${process.env.MESSAGE}</h1>`);
-// }).listen(8000);
 
 var port = process.env.PORT || 8000;
 app.listen(port, () => {
