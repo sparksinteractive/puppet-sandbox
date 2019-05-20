@@ -31,4 +31,5 @@ Setting up puppet:
 * Create an Application, link to git repo
 * Create an Application Group (for deploying a front end, as well as other moving pieces like a database)
 * Create Environments for the group (Staging + Prod)
-
+* Link to GCP Project
+** First, push container to GCP
