@@ -23,3 +23,12 @@ Sandbox for build pipelines with Puppet
 * Setup a GCP-only pipeline
 * Test with Bitbucket
 * Build tests
+
+## Puppet
+
+Setting up puppet:
+
+* Create an Application, link to git repo
+* Create an Application Group (for deploying a front end, as well as other moving pieces like a database)
+* Create Environments for the group (Staging + Prod)
+
