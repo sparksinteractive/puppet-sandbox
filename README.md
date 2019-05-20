@@ -24,6 +24,30 @@ Sandbox for build pipelines with Puppet
 * Test with Bitbucket
 * Build tests
 
+## GCP
+
+Create a Project
+
+Create a repo:
+```sh
+gcloud source repos create <puppet-sandbox>
+```
+
+Push to repo:
+```
+git remote add google <source repo url>
+git push --all google
+```
+
+Tag and Build Image:
+```
+docker tag api-node gcr.io/puppet-sandbox-241218/puppet-sandbox
+```
+
+```
+gcloud builds submit "$(pwd)/api-node" --tag=gcr.io/puppet-sandbox-241218/puppet-sandbox
+```
+
 ## Puppet
 
 Setting up puppet:
@@ -32,4 +56,3 @@ Setting up puppet:
 * Create an Application Group (for deploying a front end, as well as other moving pieces like a database)
 * Create Environments for the group (Staging + Prod)
 * Link to GCP Project
-** First, push container to GCP
