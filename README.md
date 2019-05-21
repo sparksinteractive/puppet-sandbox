@@ -23,6 +23,7 @@ Sandbox for build pipelines with Puppet
 * Setup a GCP-only pipeline
 * Test with Bitbucket
 * Build tests
+* Fix GCP firewall rules issue
 
 ## GCP
 
